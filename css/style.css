@@ -617,3 +617,93 @@ footer { padding: 80px 10% 40px; }
     padding-top: 24px;
     border-top: 1px solid #f0f0f0;
 }
+
+/* ══════════════════════════════════
+   RESPONSIVE — MOBILE (≤ 600px)
+   ══════════════════════════════════ */
+@media (max-width: 600px) {
+
+  /* — Navbar — */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 5%;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .nav-decor { display: none; }
+
+  /* — Hero — */
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 5% 50px;
+  }
+  .hero-desc { max-width: 100%; }
+  .hero-btns { justify-content: center; }
+  .hero-image { width: 100%; }
+  .main-img { max-width: 100%; }
+  .hero-plane { display: none; }
+
+  /* — Services — */
+  .service-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .services-additions { display: none; }
+
+  /* — Destinations — */
+  .dest-grid { grid-template-columns: 1fr; }
+  .dest-spiral { display: none; }
+
+  /* — Booking — */
+  .booking {
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 60px;
+  }
+  .booking-image { width: 100%; justify-content: center; }
+  .greece-main   { max-width: 100%; }
+  .trip-card {
+    position: relative;  /* take it out of absolute flow */
+    bottom: auto; left: auto;
+    width: 100%;
+    margin-top: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.10);
+  }
+
+  /* — Testimonials — */
+  .testimonials {
+    flex-direction: column;
+    padding-top: 60px;
+  }
+  .testi-left, .testi-right { flex: unset; width: 100%; }
+
+  /* — Partners — */
+  .partner-logos {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  /* — Subscribe — */
+  .sub-card {
+    padding: 50px 6%;
+    border-radius: 20px;
+  }
+  .sub-input { flex-direction: column; align-items: stretch; }
+  .input-wrapper { width: 100%; }
+  .sub-input button {
+    padding: 16px;
+    width: 100%;
+  }
+  .blue-sent { display: none; }
+
+  /* — Footer — */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  .footer-col:first-child { grid-column: 1 / -1; }
+  .footer-col.socials     { grid-column: 1 / -1; }
+}

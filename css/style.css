@@ -17,7 +17,9 @@ body {
     background: #fff;
     overflow-x: hidden;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 /* ── NAV DECOR ── */
 .nav-decor {
     position: absolute;

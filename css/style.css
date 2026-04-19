@@ -1,7 +1,3 @@
-/* ══════════════════════════════════
-   JADOO — Travel Landing Page
-   ══════════════════════════════════ */
-
 :root {
     --orange: #DF6951;
     --yellow: #F1A501;
@@ -20,7 +16,6 @@ body {
 html{
     scroll-behavior: smooth;
 }
-/* ── NAV DECOR ── */
 .nav-decor {
     position: absolute;
     top: -50px; right: 20px;
@@ -29,7 +24,6 @@ html{
     pointer-events: none;
 }
 
-/* ── NAVBAR ── */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -57,7 +51,7 @@ html{
     border-radius: 5px;
 }
 
-/* ── HERO ── */
+/* -- HERO -- */
 .hero {
     display: flex;
     align-items: center;
@@ -157,7 +151,7 @@ html{
 .hero-plane-1 { left: 25%; top: 3.4%; }
 .hero-plane-2 { left: 75%; top: 15%; }
 
-/* ── SECTION TITLES ── */
+/* -- SECTION TITLES -- */
 .section-subtitle {
     text-align: center;
     font-weight: 700;
@@ -175,7 +169,7 @@ html{
 }
 .left-align { text-align: left !important; }
 
-/* ── SERVICES ── */
+/* -- SERVICES -- */
 .services {
     padding: 80px 10%;
     position: relative;
@@ -214,7 +208,6 @@ html{
 }
 .service-card p { font-size: 13.5px; line-height: 1.7; }
 
-/* orange rectangle decoration */
 .service-rect {
     position: absolute;
     bottom: 50px;
@@ -224,7 +217,7 @@ html{
     z-index: -1;
 }
 
-/* ── DESTINATIONS ── */
+/* -- DESTINATIONS -- */
 .destinations {
     padding: 80px 10%;
     position: relative;
@@ -284,7 +277,7 @@ html{
 }
 .dest-spiral img { width: 150px; }
 
-/* ── BOOKING ── */
+/* -- BOOKING -- */
 .booking {
     display: flex;
     align-items: center;
@@ -386,7 +379,7 @@ html{
 .going-text   { font-size: 12px; flex: 1; }
 .going-heart  { width: 16px; height: 16px; opacity: .4; }
 
-/* ── TESTIMONIALS ── */
+/* -- TESTIMONIALS -- */
 .testimonials {
     display: flex;
     gap: 80px;
@@ -464,7 +457,7 @@ html{
 }
 .chev:hover { background: var(--orange); color: #fff; border-color: var(--orange); }
 
-/* ── PARTNERS ── */
+/* -- PARTNERS -- */
 .partners {
     padding: 60px 10%;
     background: #fafafa;
@@ -491,7 +484,7 @@ html{
     width: 120px;
 }
 
-/* ── SUBSCRIBE ── */
+/* -- SUBSCRIBE -- */
 .subscribe { padding: 80px 10%; }
 .sub-card {
     background: #F9F7FE;
@@ -557,7 +550,7 @@ html{
     width: 55px; z-index: 2;
 }
 
-/* ── FOOTER ── */
+/* -- FOOTER -- */
 footer { padding: 80px 10% 40px; }
 .footer-grid {
     display: grid;
@@ -619,12 +612,9 @@ footer { padding: 80px 10% 40px; }
     border-top: 1px solid #f0f0f0;
 }
 
-/* ══════════════════════════════════
-   RESPONSIVE — MOBILE (≤ 600px)
-   ══════════════════════════════════ */
+/*-- RESPONSIVE — MOBILE (≤ 600px) --*/
 @media (max-width: 600px) {
 
-  /* — Navbar — */
   .navbar {
     flex-direction: column;
     align-items: flex-start;
@@ -637,7 +627,6 @@ footer { padding: 80px 10% 40px; }
   }
   .nav-decor { display: none; }
 
-  /* — Hero — */
   .hero {
     flex-direction: column;
     text-align: center;
@@ -649,15 +638,12 @@ footer { padding: 80px 10% 40px; }
   .main-img { max-width: 100%; }
   .hero-plane { display: none; }
 
-  /* — Services — */
   .service-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
   .services-additions { display: none; }
 
-  /* — Destinations — */
   .dest-grid { grid-template-columns: 1fr; }
   .dest-spiral { display: none; }
 
-  /* — Booking — */
   .booking {
     flex-direction: column;
     gap: 50px;
@@ -673,21 +659,18 @@ footer { padding: 80px 10% 40px; }
     box-shadow: 0 10px 30px rgba(0,0,0,.10);
   }
 
-  /* — Testimonials — */
   .testimonials {
     flex-direction: column;
     padding-top: 60px;
   }
   .testi-left, .testi-right { flex: unset; width: 100%; }
 
-  /* — Partners — */
   .partner-logos {
     flex-wrap: wrap;
     justify-content: center;
     gap: 24px;
   }
 
-  /* — Subscribe — */
   .sub-card {
     padding: 50px 6%;
     border-radius: 20px;
@@ -700,7 +683,6 @@ footer { padding: 80px 10% 40px; }
   }
   .blue-sent { display: none; }
 
-  /* — Footer — */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
     gap: 28px;

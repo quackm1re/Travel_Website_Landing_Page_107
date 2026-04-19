@@ -31,7 +31,6 @@ html{
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 28px 10%;
 }
 .logo img {
@@ -364,121 +363,156 @@ html{
 }
 
 .booking-image {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: center;
-}
-.greece-main {
-    width: 100%; max-width: 440px;
-    border-radius: 24px;
-    object-fit: cover;
-    box-shadow: 0 30px 70px rgba(0,0,0,.12);
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .trip-card {
-    position: absolute;
-    bottom: -30px; left: -10px;
-    background: #fff;
-    border-radius: 26px;
-    padding: 18px 20px;
-    width: 255px;
-    box-shadow: 0 20px 60px rgba(0,0,0,.13);
-}
-.trip-card-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 14px;
-}
-.trip-thumb {
-    width: 54px; height: 54px;
-    border-radius: 14px;
-    object-fit: cover;
-}
-.trip-title  { 
-    font-weight: 700; 
-    color: var(--dark); 
-    font-size: 14px;
-}
-.trip-meta  { 
-    color: var(--grey); 
-    font-size: 11px; 
-    margin-top: 3px;
+  position: absolute;
+  bottom: -180px;
+  left: 280px;
+  background: #fff;
+  border-radius: 26px;
+  width: 255px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.13);
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
 }
 
-.trip-progress-row {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    margin-bottom: 14px;
+.trip-card:hover {
+  box-shadow: 0 24px 70px rgba(0,0,0,.2);
 }
-.trip-icons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4px;
+
+.greece-main {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  display: block;
 }
-.trip-icons img {
-    width: 28px; height: 28px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
+
+.trip-card-body {
+  padding: 14px 16px;
 }
-.icon-count { 
-    font-size: 10px; 
-    font-weight: 600;
+
+.trip-title {
+  font-weight: 700;
+  color: var(--dark);
+  font-size: 14px;
 }
-.progress-info { 
-    flex: 1;
+
+.trip-meta {
+  color: var(--grey);
+  font-size: 11px;
+  margin-top: 3px;
+  margin-bottom: 12px;
 }
-.ongoing { 
-    font-size: 10px; 
-    margin-bottom: 2px;
-}
-.trip-name-small{ 
-    font-weight: 600; 
-    color: var(--dark); 
-    font-size: 13px; 
-    margin-bottom: 7px;
-}
-.progress-bar   { 
-    background: #f0f0f0; 
-    height: 6px; 
-    border-radius: 3px; 
-    margin-bottom: 4px;
-}
-.progress-fill  { 
-    width: 40%; 
-    height: 100%; 
-    background: linear-gradient(90deg,#FF6B6B,#DF6951); 
-    border-radius: 3px;
-}
-.progress-pct { 
-    font-size: 10px;
+
+.trip-options-img {
+  height: 30px;
+  object-fit: contain;
+  margin-bottom: 14px;
 }
 
 .going-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding-top: 10px;
-    border-top: 1px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #f5f5f5;
 }
-.going-avatar { 
-    width: 26px; 
-    height: 26px; 
-    border-radius: 50%; 
-    object-fit: cover;
+
+.going-bar-icon {
+  width: 16px;
+  height: 16px;
+  opacity: 0.5;
 }
-.going-text   { 
-    font-size: 12px; 
-    flex: 1;
+
+.going-text {
+  font-size: 12px;
+  color: #555;
+  flex: 1;
 }
-.going-heart  { 
-    width: 16px; 
-    height: 16px; 
-    opacity: .4;
+
+.going-heart {
+  width: 16px;
+  height: 16px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.going-heart:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.ongoing-card {
+  position: absolute;
+  bottom: -140px;
+  right: 117px;
+  background: #fff;
+  border-radius: 20px;
+  padding: 12px 14px;
+  width: 170px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.13);
+  transition: box-shadow 0.2s ease;
+}
+
+.ongoing-card:hover {
+  box-shadow: 0 24px 70px rgba(0,0,0,.2);
+}
+
+.ongoing-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.trip-thumb {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.progress-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.ongoing {
+  font-size: 10px;
+  color: #aaa;
+  margin-bottom: 2px;
+}
+
+.trip-name-small {
+  font-weight: 600;
+  color: #222;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.progress-bar {
+  background: #ececec;
+  height: 5px;
+  border-radius: 3px;
+  margin-bottom: 4px;
+}
+
+.progress-fill {
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, #FF6B6B, #DF6951);
+  border-radius: 3px;
+}
+
+.progress-pct {
+  font-size: 10px;
+  color: #aaa;
 }
 
 /* -- TESTIMONIALS -- */
@@ -504,7 +538,6 @@ html{
     width: 10px; height: 10px;
     border-radius: 50%;
     background: #ddd;
-    cursor: pointer;
 }
 .active-dot {
     background: var(--orange);
@@ -522,7 +555,6 @@ html{
 .testi-quote {
     font-size: 15px;
     line-height: 1.8;
-    font-style: italic;
     margin-bottom: 26px;
 }
 .testi-author {
@@ -548,10 +580,11 @@ html{
 }
 
 .testi-next {
+    position: relative;
+    left: 40px;
     padding: 12px 16px;
-    background: #f9f9f9;
     border-radius: 12px;
-    opacity: .65;
+    opacity: .85;
 }
 .testi-next-name { 
     font-weight: 600;
@@ -599,6 +632,7 @@ html{
 .partner-logos img {
     object-fit: contain;
     transition: filter .3s, opacity .3s;
+    filter: grayscale(100%);
 }
 .partner-logos img:hover { 
     filter: grayscale(0%); 
@@ -687,6 +721,11 @@ html{
     position: absolute;
     top: -20px; right: 80px;
     width: 55px; z-index: 2;
+}
+.additions-reversed{
+    position: absolute;
+    right: -100px;
+    top: 230px;
 }
 
 /* -- FOOTER -- */

@@ -152,7 +152,6 @@ html{
     max-width: 550px;
     position: relative;
     z-index: 1;
-    filter: drop-shadow(0 20px 60px rgba(0,0,0,.1));
 }
 .hero-plane {
     position: absolute;
@@ -187,9 +186,6 @@ html{
     color: var(--dark);
     margin-bottom: 55px;
 }
-.left-align { 
-    text-align: left ;
-}
 
 /* -- SERVICES -- */
 .services {
@@ -207,6 +203,7 @@ html{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 24px;
+    z-index: 1;
 }
 .service-card {
     padding: 36px 28px;
@@ -354,8 +351,10 @@ html{
     object-fit: contain;
 }
 .step-info h4 {
-    font-size: 16px; font-weight: 600;
-    color: var(--dark); margin-bottom: 5px;
+    font-size: 16px; 
+    font-weight: 600;
+    color: var(--dark); 
+    margin-bottom: 5px;
 }
 .step-info p { 
     font-size: 13.5px; 
@@ -743,7 +742,7 @@ footer {
     font-size: 26px;
     margin-bottom: 18px;
 }
-.footer-col > p {
+.footer-col p {
     font-size: 14px;
     line-height: 1.8;
     max-width: 200px;
